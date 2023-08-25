@@ -7,9 +7,12 @@ function resolvePromise()
 	{
 		let pro = new Promise((resolve) => {
    setTimeout(() => {
-	   output.innerText = "Hello, world";
+	   resolve("Hello, world!");
    }, 1000)
    })
+		pro.then((data) => {
+			output.innerText = data;
+		}) 
 	}
 
 resolvePromise();
